@@ -9,8 +9,8 @@
 <body>
     <h2>Create your E-Library Account</h2>
     <form action="register.php" method="POST">
-        <label>Choose Username:</label>
-        <input type="text" name="username" placeholder="Choose username" required><br>
+        <label>Choose Username/Email:</label>
+        <input type="text" name="username" placeholder="Choose username/email" required><br>
         <label>Choose Password:</label>
         <input type="password" name="password" placeholder="Choose password" required><br>
         <button type="submit" name="register">Sign up</button>
