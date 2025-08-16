@@ -1,58 +1,266 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f6f8;
+* {
     margin: 0;
     padding: 0;
-    text-align: center;
+    box-sizing: border-box;
 }
 
-h2{
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f8;
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+/* Center align all headings with margin & padding */
+h2 {
+    text-align: center;
+    margin: 15px 0;   /* space above and below */
+}
+
+/* ---Header & Navigation--- */
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #27ae60;
+}
+
+.login-button {
+    background: #27ae60;
+    padding: 8px 14px;
+    border-radius: 5px;
+}
+
+.login-button:hover {
+    background: #1e8449;
+}
+
+/* --- Hero Section (Landing Page) --- */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background-image: url("library.jpg");
+    background-size: cover;      /* makes image cover full section */
+    background-position: center; /* keeps image centered */
+    background-repeat: no-repeat; 
+    height: 400px;               /* set height of the hero section */
+    width: 100%;                 /* full width of the page */
+    color: white;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.search-bar {
+    margin-top: 20px;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 280px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background: #31a175;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background: #2a968a;
+}
+
+/* ---Features Section--- */
+.features {
+    padding: 40px 20px;
+    background: white;
+}
+
+.features h2 {
+    margin-bottom: 20px;
+}
+
+.feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.feature {
+    background: #f9f9f9;
+    padding: 20px;
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+}
+
+/* --- About & Contact Sections --- */
+.about, .contact {
+    text-align: center;
+    padding: 40px 20px;
+    background: #ecf0f1;
+    margin-top: 20px;
+}
+
+.about h2, .contact h2 {
+    margin-bottom: 15px;
+}
+
+/* --- Footer --- */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* --- Forms (Login, Register, Logout) --- */
+form {
+    background: #ffffff;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+form h2 {
+    margin-bottom: 10px;
     color: #2c3e50;
 }
 
-form{
-    background: #ffffff;
-    padding: 20px;
-    margin: 20px auto;
-    display: inline-block;
-    border-radius: 8px;
-    box-shadow: 0 20px 8px rgba(0, 0, 0, 0.1);
-}
-
-input, button{
-    padding: 10px;
-    margin: 8px;
+/* Inputs */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
-input[type="text"], input[type="password"] {
-    width: 250px;
-}
-
-button{
-    background-color: #3498db;
-    color: white;
-    cursor: pointer;
+/* Buttons */
+button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
     border: none;
+    background: #3498db;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
     transition: background 0.3s;
 }
 
-button:hover{
-    background-color: #2980b9;
+button:hover {
+    background: #2980b9;
 }
 
-p{
-    margin-top: 10px;
+/* Message below forms (like "Already have an account?") */
+.form-message {
+    text-align: center;     /* center align */
+    font-size: 20px;
+    color: #555;
+}
+
+.form-message a {
+    color: #3b80ce;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.form-message a:hover {
+    text-decoration: underline;
+}
+
+/* Links inside forms */
+form p {
+    text-align: center;   /* Center align the text */
+    margin-top: 20px;     /* spacing from inputs */
     font-size: 14px;
+    color: #666;
 }
 
-p a{
+form p a {
     color: #3498db;
     font-weight: bold;
     text-decoration: none;
 }
 
-p a:hover{
+form p a:hover {
     text-decoration: underline;
+}
+
+/* ------------------------------
+   Logout Page Styling
+------------------------------ */
+.logout-box {
+    max-width: 400px;
+    margin: 100px auto;
+    background: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logout-box h2 {
+    margin-bottom: 15px;
+}
+
+.logout-box a {
+    display: inline-block;
+    margin-top: 10px;
+    background: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.logout-box a:hover {
+    background: #2980b9;
 }
