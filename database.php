@@ -14,5 +14,4 @@
     if (!mysqli_real_connect($conn, $host, $user, $pass, $dbname, $port, NULL, MYSQLI_CLIENT_SSL)) {
         die("Connection failed: " . mysqli_connect_error());
     }
-    mysqli_close($conn);
 ?>
