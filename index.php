@@ -76,7 +76,6 @@
         value="<?php echo htmlspecialchars($old['username_or_email'] ?? ''); ?>"><br>
         <label>Password:</label><br>
         <input type="password" name="password" id="password" placeholder="Password" required><br>
-        <!--Style this too PRIYANSHI!!-->
         <input type="checkbox" id="show_passwords">Show password <!--Checkbox to toggle show password settings--> 
         <?php if(!empty($errors)): ?>    <!--If there is an error, show it to the user.-->
             <?php foreach($errors as $error): ?>  <!--Using a foreach loop to iterate over each error stored in errors array-->
