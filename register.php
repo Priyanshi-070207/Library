@@ -87,11 +87,10 @@
         value="<?php echo htmlspecialchars($old['username'] ?? ''); ?>"><br> <!--If the user had entered details but there was an error show the old data to the user-->
         <label for="email">Email: </label>
         <input type="email" name="email" id="email" placeholder="Enter your email" required
-        value="<?php echo htmlspecialchars($old['email'] ?? ''); ?>"><br> <!--Style this too PRIYANSHI!!-->
+        value="<?php echo htmlspecialchars($old['email'] ?? ''); ?>"><br>
         <label>Choose Password:</label>
         <input type="password" name="password" id="password" placeholder="Choose password" required><br>
         <input type="checkbox" id="show_passwords">Show passwords <!--Checkbox to toggle show password settings--> 
-        <!--Style this too PRIYANSHI!!-->
 
         <?php if(!empty($errors)): ?> <!--If there is an error, show it to the user.-->
                     <div class="error-messages">
@@ -109,7 +108,7 @@
 
         <button type="submit" name="register">Sign up</button>
     </form>
-    <p>Already have an account? <a href="index.php">Login here</a></p>
+    <p class="form-message">Already have an account? <a href="index.php">Login here</a></p>
     <script src="register.js"></script> <!--Link the js file-->
 </body>
 </html>
