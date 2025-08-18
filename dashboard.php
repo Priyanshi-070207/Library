@@ -3,10 +3,10 @@ session_start();
 include 'database.php'; // Database connection file
 
 //  Check if user is logged in and has role 'user'
-if (!isset($_SESSION['role']) || $_SESSION['role'] != 'user') {
-    header("Location: index.php"); // Redirect to login if not user
-    exit();
-}
+// if (!isset($_SESSION['role']) || $_SESSION['role'] != 'user') {
+//     header("Location: index.php"); // Redirect to login if not user
+//     exit();
+// }
 
 //  Search functionality
 $where = "";
@@ -40,7 +40,7 @@ $result = $conn->query("SELECT * FROM books $where");
 
     <!--  Dashboard Section -->
     <section class="dashboard">
-        <h2>Welcome, <?= htmlspecialchars($_SESSION['username']); ?> 👋</h2>
+        <h2>Welcome, <?= htmlspecialchars($_SESSION['user']); ?> 👋</h2>
 
         <!-- Search Form -->
         <form method="POST" class="search-form">
