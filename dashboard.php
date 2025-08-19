@@ -57,6 +57,8 @@ $result = $conn->query("SELECT * FROM books $where");
                     <th>Title</th>
                     <th>Author</th>
                     <th>Category</th>
+                    <th>Cover</th>
+                    <th>Description</th>
                     <th>Stock</th>
                     <th>Action</th>
                 </tr>
@@ -67,6 +69,10 @@ $result = $conn->query("SELECT * FROM books $where");
                     <td><?= htmlspecialchars($row['title']); ?></td>
                     <td><?= htmlspecialchars($row['author']); ?></td>
                     <td><?= htmlspecialchars($row['category']); ?></td>
+                    <td>
+                        <img src="<?= htmlspecialchars($row['cover_image']); ?>" alt="<?= htmlspecialchars($row['title']); ?> Cover" width="100">
+                    </td>
+                    <td><?= htmlspecialchars($row['description']); ?></td>
                     <td><?= $row['stock']; ?></td>
                     <td>
                         <?php if ($row['stock'] > 0) { ?>
